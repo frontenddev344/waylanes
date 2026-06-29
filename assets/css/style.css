@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --bg_dark:#404040;
-    --bg_light:#eaeaea;
-    --button:#2F2F2F;
-    --heading:#191B18;
-    --white:#ffffff;
-    --scrollbar:#9f9f9f;
-    --scrolltrack:#5e5e5e;
-  }
-
-/* Global CSS Start */
-html {
-    font-size: 1rem;
+    --bg_dark: #292D33;
+    --bg_light: #f8f5f1;
+    --button: #2F2F2F;
+    --heading_dark: #203350;
+    --heading_light: #E1C499;
+    --para: #1C2D4F;
+    --white: #ffffff;
+    --scrollbar: #9f9f9f;
+    --scrolltrack: #5e5e5e;
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Inter", sans-serif;
 }
 
-* {
+/* Global CSS Start */
+
+
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -24,10 +26,11 @@ html {
 
 html {
     scroll-behavior: smooth;
+        font-size: 1rem;
 }
 
 body {
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-body);
     padding: 0;
     margin: 0;
     word-break: break-word;
@@ -40,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Hanken Grotesk", sans-serif;
+    font-family: var(--font-heading);
     margin: 0;
     line-height: 1;
 }
@@ -49,7 +52,7 @@ p {
     line-height: 1.3;
     padding: 0;
     margin: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-body);
     font-weight: 500;
 }
 
@@ -67,17 +70,17 @@ ul li {
 a {
     display: inline-block;
     text-decoration: none;
-    font-family: "Hanken Grotesk", sans-serif;
+    font-family: var(--font-body);
 }
 
 button,
 textarea,
 input {
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-body);
 }
 
 input {
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-body);
 }
 
 img {
@@ -219,275 +222,554 @@ img {
 
 /* OVeralay CSS Start */
 .common_overlay {
-	overflow: hidden;
-	position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 .common_overlay .box {
-	position: absolute;
-	width: 50%;
-	height: 50%;
-	background: rgba(223 169 116/0.3);
-	transition: transform 0.4s ease;
-	z-index: 2;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: rgba(223 169 116/0.3);
+    transition: transform 0.4s ease;
+    z-index: 2;
 }
 
 .common_overlay .box1 {
-	top: 0;
-	left: 0;
-	transform: translate(-100%, -100%);
+    top: 0;
+    left: 0;
+    transform: translate(-100%, -100%);
 }
 
 .common_overlay .box2 {
-	top: 0;
-	right: 0;
-	transform: translate(100%, -100%);
+    top: 0;
+    right: 0;
+    transform: translate(100%, -100%);
 }
 
 .common_overlay .box3 {
-	bottom: 0;
-	left: 0;
-	transform: translate(-100%, 100%);
+    bottom: 0;
+    left: 0;
+    transform: translate(-100%, 100%);
 }
 
 .common_overlay .box4 {
-	bottom: 0;
-	right: 0;
-	transform: translate(100%, 100%);
+    bottom: 0;
+    right: 0;
+    transform: translate(100%, 100%);
 }
 
 .common_overlay:hover .box {
-	transform: translate(0, 0);
+    transform: translate(0, 0);
 }
 
 /* OVeralay CSS End*/
 
-/* Header CSS Start */
-.sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 9999;
-    transition: all 0.3s ease-in-out;
-    padding: 0.9375rem 0px;
-}
-
-.sticky-header.fixed_header {
-    background-color: #222222;
-
-}
-
-.main-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0.9375rem 0;
-}
-
-.navigation-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.brand-container {
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
-}
-
-.brand-container a,
-.footer_logo a {
-    background-image: url(../images/logo.svg);
-    background-position: left;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 3.75rem;
-    width: 14.75rem;
-}
-
-.menu-toggle-btn {
-    display: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    text-align: right;
-    cursor: pointer;
-    margin: auto 0;
-    z-index: 60;
-    background-image: url("../images/menu.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.navigation-menu {
-    display: flex;
-    margin-left: auto;
-}
-
-.navigation-menu ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navigation-menu ul li a {
-    padding: 0.625rem;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    line-height: normal;
-    position: relative;
-    color: #fff;
-    letter-spacing: 1px;
+/* Butn CSS Start */
+.butn {
+    padding: 0.625rem 1.5625rem;
     font-weight: 500;
-}
-
-
-.navigation-menu ul li a:hover {
-    color: #E66A31;
-}
-
-.navigation-menu ul li a.active {
-    color: #E66A31;
-}
-
-.navigation-menu ul li a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    border-radius: 5px;
-    height: 1.5px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #E66A31;
-    transform-origin: center;
-    transition: all 0.3s ease-out;
-}
-
-.navigation-menu ul li a.active::after {
-    transform: scaleX(0.9);
-    background: #E66A31;
-    transform-origin: center;
-}
-
-.navigation-menu ul li a:hover::after {
-    transform: scaleX(0.9);
-}
-
-.menu-close-btn {
-    display: none;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../images/close.png);
-}
-
-.menu_dropdown {
-    width: 100%;
+    background: var(--heading_dark);
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
     display: inline-block;
-    margin-right: 10px;
-    position: relative;
+    z-index: 1;
+    color: var(--white);
+    text-transform: uppercase;
+    border-radius: 1.875rem;
 }
 
-.menu_dropdown ul {
-    list-style-type: none;
-    display: block;
-    margin: 0;
-    padding: 1rem 0;
+.butn:after {
     position: absolute;
+    content: "";
     width: 100%;
-    min-width: 25rem;
-    overflow: hidden;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #E66A31;
-    border-radius: 1.25rem;
-    z-index: 999;
-    max-height: 0;
-    transition: all 0.8s ease;
-    opacity: 0;
-    visibility: hidden;
-    text-align: left;
-}
-
-.menu_dropdown.open ul {
-    max-height: 62.5rem;
-    opacity: 1;
-    visibility: visible;
-}
-
-.menu_dropdown ul li a {
-    color: #ffff;
-}
-
-.menu_dropdown a {
-    display: block;
-    padding: 0 0 0 0.625rem;
-    text-decoration: none;
-    color: #fff;
-
-}
-
-.menu_dropdown ul li a {
-    color: #fff;
-    font-weight: 600;
-    position: relative;
-}
-
-.menu_dropdown ul li a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    border-radius: 5px;
-    height: 1.5px;
+    height: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    background: #fff;
-    transform-origin: center;
-    transition: all 0.3s ease-out;
+    z-index: -1;
+    background: var(--white);
+    transition: all 0.3s ease;
+    border-radius: 1.875rem;
 }
 
-.menu_dropdown ul li a.active::after {
-    transform: scaleX(0.9);
-    background: #fff;
-    transform-origin: center;
+.butn:hover {
+    color: var(--heading_dark);
 }
 
-li.list-dropdown .menu_dropdown ul li a {
-    text-align: left;
+.butn:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+.butn:active {
+    top: 2px;
+}
+.butn.theme{
+    background: var(--heading_light);
+    color: var(--heading_dark);
+}
+.butn.theme:after {
+    background: var(--white);
+}
+.butn.white{
+    background: var(--white);
+    color: var(--heading_dark);
+}
+.butn.white:hover{
+    color: var(--white);
+}
+.butn.white:after {
+    background: var(--heading_dark);
+}
+/* Butn CSS End */
+
+
+
+.abt-header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:9999;
+padding:22px 0;
+background:rgba(0,0,0,0.35);
+backdrop-filter: blur(12px);
+transition:.4s;
+}
+
+.abt-header.abt-sticky{
+background:#fff;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+padding:16px 0;
+}
+
+.abt-header.abt-sticky .abt-menu a{
+color:#222;
+}
+
+.abt-header.abt-sticky .abt-menu a:hover,
+.abt-header.abt-sticky .abt-menu .active{
+color:#d8b97f;
+}
+
+.abt-header.abt-sticky .abt-toggle{
+background:rgba(255,255,255,0.95);
+border:1px solid rgba(0,0,0,.12);
+}
+
+.abt-header.abt-sticky .abt-toggle span{
+background:#222;
+}
+
+.abt-container{
+width:min(1320px,92%);
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.abt-logo{
+font-size:32px;
+font-family:"Cormorant Garamond",serif;
+color:#fff;
+font-weight:600;
+text-decoration:none;
+letter-spacing:0.08em;
+transition:.4s;
+}
+
+.abt-sticky .abt-logo{
+color:#222;
+}
+
+.abt-menu{
+display:flex;
+align-items:center;
+gap:40px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.abt-menu a{
+color:#fff;
+text-decoration:none;
+font-size:15px;
+font-weight:600;
+position:relative;
+letter-spacing:0.02em;
+transition:.3s;
+}
+
+.abt-sticky .abt-menu a{
+color:#222;
+}
+
+.abt-menu a:hover,
+.abt-menu .active,
+.abt-sticky .abt-menu a:hover,
+.abt-sticky .abt-menu .active{
+color:#d8b97f;
+}
+
+.abt-menu a:after{
+content:"";
+position:absolute;
+bottom:-8px;
+left:0;
+height:2px;
+width:0;
+background:#d5b07d;
+transition:.35s;
+}
+
+.abt-menu a:hover:after,
+.abt-menu .active:after{
+width:100%;
+}
+
+.abt-right{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.abt-book-btn{
+background:#d8bf97;
+padding:14px 32px;
+text-decoration:none;
+color:#222;
+font-weight:700;
+border-radius:5px;
+transition:.3s;
+}
+
+.abt-book-btn:hover{
+background:#fff;
+transform:translateY(-3px);
+}
+
+.abt-toggle{
+display:none;
+background:none;
+border:0;
+cursor:pointer;
+}
+
+
+
+.abt-sticky .abt-toggle span{
+background:#222;
+}
+.abt-hero{
+
+position:relative;
+
+height:100vh;
+
+overflow:hidden;
+
+}
+
+
+
+/* Home Banner CSS Start */
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url("images/hotel-hero.jpg") center center / cover no-repeat;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(32,51,80,.72),
+        rgba(41,45,51,.82)
+    );
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+    max-width: 47.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-badge{
+    display: inline-block;
+    padding: 0.625rem 1.375rem;
+    border: 0.0625rem solid rgba(225, 196, 153, .45);
+    color: var(--heading_light);
+    background: rgba(255, 255, 255, .05);
+    border-radius: 2.5rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 1.75rem;
+    font-family: var(--font-body);
+}
+
+.hero h1{
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 1.5625rem;
+}
+
+.hero h1 span{
+    display:block;
+    color:var(--heading_light);
+}
+
+.hero p{
+    max-width:620px;
+    margin:0 auto 45px;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:rgba(255,255,255,.88);
+    font-family:var(--font-body);
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.hero-subtitle{
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-weight: 500;
+    color: var(--heading_light);
+    margin: 0 0 1.5625rem;
+    line-height: 1.3;
+}
+
+.hero p{
+    max-width: 47.5rem;        
+    margin: 0 auto 1.375rem;     
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255,255,255,.9);
+    font-family: var(--font-body);
+}
+
+.hero-small{
+    max-width: 43.75rem;
+    margin: 0 auto 2.8125rem;
     font-size: 1rem;
-    font-weight: 400;
+    color: rgba(255, 255, 255, .75);
 }
 
-.menu_dropdown ul li a:hover::after {
-    transform: scaleX(0.9);
-}
+/* Home Banner CSS End */
 
+/* About Page CSS Start */
 
-.menu_dropdown ul li a:hover {
-    color: #fff;
-}
+.abt-hero{
 
-.menu_dropdown.hover>a svg {
-    fill: #fff;
-    width: 15px;
-    height: 15px;
-    margin-top: -5px;
-}
+    position:relative;
+    
+    height:100vh;
+    
+    overflow:hidden;
+    
+    }
+    
+    .abt-hero img{
+    
+    width:100%;
+    
+    height:100%;
+    
+    object-fit:cover;
+    
+    animation:abtZoom 12s infinite alternate;
+    
+    }
+    
+    @keyframes abtZoom{
+    
+    from{
+    
+    transform:scale(1.12);
+    
+    }
+    
+    to{
+    
+    transform:scale(1);
+    
+    }
+    
+    }
+    
+    .abt-overlay{
+    
+    position:absolute;
+    
+    inset:0;
+    
+    background:rgba(0,0,0,.45);
+    
+    }
+    
+    .abt-hero-content{
+    
+    position:absolute;
+    
+    left:50%;
+    
+    top:50%;
+    
+    transform:translate(-50%,-50%);
+    
+    text-align:center;
+    
+    max-width:900px;
+    
+    width:90%;
+    
+    color:#fff;
+    
+    }
+    
+    .abt-hero-content span{
+    
+    letter-spacing:5px;
+    
+    text-transform:uppercase;
+    
+    font-size:14px;
+    
+    }
+    
+    .abt-hero-content h1{
+    
+    font-size:74px;
+    
+    font-family:"Cormorant Garamond",serif;
+    
+    margin:25px 0;
+    
+    line-height:1.1;
+    
+    }
+    
+    .abt-hero-content p{
+    
+    font-size:18px;
+    
+    line-height:1.9;
+    
+    max-width:760px;
+    
+    margin:auto;
+    
+    }
+    
+    .abt-btn{
+    
+    display:inline-block;
+    
+    margin-top:45px;
+    
+    padding:18px 42px;
+    
+    background:#d8bf97;
+    
+    border-radius:40px;
+    
+    color:#222;
+    
+    text-decoration:none;
+    
+    font-weight:600;
+    
+    transition:.35s;
+    
+    }
+    
+    .abt-btn:hover{
+    
+    background:#fff;
+    
+    transform:translateY(-5px);
+    
+    }
+    
+    .abt-about-section{
+    
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+    padding:100px 0 120px;
+    max-width:1140px;
+    margin:0 auto;
+    }
+    
+    .abt-about-text span{
+    display:inline-block;
+    text-transform:uppercase;
+    letter-spacing:0.35em;
+    color:#d8bf97;
+    font-size:13px;
+    margin-bottom:22px;
+    }
+    
+    .abt-about-text h2{
+    font-size:42px;
+    line-height:1.08;
+    margin-bottom:24px;
+    color:#222;
+    }
+    
+    .abt-about-text p{
+    font-size:18px;
+    line-height:1.8;
+    max-width:680px;
+    color:#4a4a4a;
+    margin-bottom:30px;
+    }
+    
+    .abt-about-actions{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    }
+    
+    .abt-about-link,
+    .abt-link{
+    color:#222;
+    text-decoration:none;
+    font-weight:600;
+    border-bottom:2px solid transparent;
+    transition:.25s;
+    }
+    
+    .abt-link:hover{
+    border-color:#d8bf97;
+    }
+    
+    .abt-about-image img{
+    width:100%;
+    height:auto;
+    border-radius:24px;
+    object-fit:cover;
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+    }
+    
 
-.navigation-menu ul li a.active svg {
-    fill: #e66a31;
-}
-
-/* Header CSS End */
-
+    /* About Page CSS End */
