@@ -196,7 +196,9 @@ img {
 .bg-0-0 {
     background-position: 0% 0%;
 }
-
+span.theme{
+    color: var(--heading_light);
+}
 /* Global CSS End */
 
 /* Website Scrollbar CSS  */
@@ -326,7 +328,7 @@ img {
 /* Butn CSS End */
 
 
-
+/* About Page CSS Start */
 .abt-header{
 position:fixed;
 top:0;
@@ -464,6 +466,149 @@ background:#222;
 .book_btn_desktop {
     display: none !important;
 }
+
+/* About Page CSS End */
+
+
+/* Home Banner CSS Start */
+
+.hero_banner_section{
+    display:grid;
+    grid-template-columns:42% 58%;
+    min-height:50rem;
+    background:var(--bg_light);
+}
+
+/*==========================
+        CONTENT
+==========================*/
+
+.hero_banner_content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:5rem;
+
+    background:linear-gradient(
+        135deg,
+        var(--heading_dark),
+        var(--bg_dark)
+    );
+
+    color:var(--white);
+}
+
+.hero_banner_line{
+    width:.125rem;
+    height:5rem;
+    margin-bottom:2rem;
+
+    background:var(--heading_light);
+}
+
+.hero_banner_tag{
+    display:inline-block;
+    margin-bottom:1.5rem;
+
+    color:var(--heading_light);
+
+    font-family:var(--font-body);
+    font-size:.875rem;
+    font-weight:500;
+    letter-spacing:.18rem;
+    text-transform:uppercase;
+}
+
+.hero_banner_title{
+    margin-bottom:1.5rem;
+
+    font-family:var(--font-heading);
+    font-size:clamp(2.8rem,5vw,5rem);
+    font-weight:600;
+    line-height:1;
+    color:var(--white);
+}
+
+.hero_banner_title_highlight{
+    display:block;
+    color:var(--heading_light);
+}
+
+.hero_banner_subtitle{
+    margin-bottom:2rem;
+
+    font-family:var(--font-heading);
+    font-size:1.75rem;
+    font-weight:500;
+    line-height:1.3;
+    color:var(--white);
+}
+
+.hero_banner_description{
+    max-width:34rem;
+    margin-bottom:3rem;
+
+    color:rgba(255,255,255,.82);
+
+    font-family:var(--font-body);
+    font-size:1rem;
+    line-height:2;
+}
+
+.hero_banner_button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:max-content;
+
+    padding:1rem 2.75rem;
+
+    background:var(--heading_light);
+    color:var(--heading_dark);
+
+    border:.125rem solid var(--heading_light);
+    border-radius:.3125rem;
+
+    text-decoration:none;
+    font-family:var(--font-body);
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.35s ease;
+}
+
+.hero_banner_button:hover{
+    background:transparent;
+    color:var(--heading_light);
+}
+
+/*==========================
+          IMAGE
+==========================*/
+
+.hero_banner_image_wrapper{
+    overflow:hidden;
+}
+
+.hero_banner_image{
+    width:100%;
+    height:100%;
+
+    display:block;
+    object-fit:cover;
+
+    transition:.5s ease;
+}
+
+.hero_banner_section:hover .hero_banner_image{
+    transform:scale(1.05);
+}
+
+/* Home Banner CSS End */
+
+/* About Page CSS Start */
 /* Home Banner CSS Start */
 
 .hero{
@@ -564,9 +709,6 @@ background:#222;
 }
 
 /* Home Banner CSS End */
-
-/* About Page CSS Start */
-
 .abt-hero{
 
     position:relative;
@@ -736,5 +878,158 @@ background:#222;
   box-shadow:0 30px 60px rgba(0,0,0,.12);
   }
     
-
+  .abt-story-section{
+    padding:120px 0;
+    background:var(--bg_light);
+    
+    }
+    
+    .abt-story-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+    
+    }
+    
+    .abt-story-image{
+    position:relative;
+    
+    }
+    
+    .abt-story-image img{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+    border-radius:12px;
+    display:block;
+    
+    }
+    
+    .abt-story-badge{
+    position:absolute;
+    bottom:35px;
+    right:-40px;
+    background:#c8a46d;
+    padding:30px;
+    width:180px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    
+    }
+    
+    .abt-story-badge h3{
+    font-size:52px;
+    font-family:'Cormorant Garamond',serif;
+    color:var(--bg_light);
+    margin:0;
+    
+    }
+    
+    .abt-story-badge span{
+    color:var(--bg_light);
+    font-size:15px;
+    display:block;
+    margin-top:8px;
+    
+    }
+    
+    .abt-subtitle{
+    display:inline-block;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--heading_light);
+    margin-bottom:20px;
+    
+    }
+    
+    .abt-story-content h2{
+    font-size:56px;
+    line-height:1.15;
+    font-family:'Cormorant Garamond',serif;
+    color:var(--heading_dark);
+    margin-bottom:30px;
+    
+    }
+    
+    .abt-story-content p{
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        color: var(--scrolltrack);
+    
+    }
+    
+    .abt-story-features{
+    
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin:40px 0;
+    
+    }
+    
+    .abt-feature{
+    background:var(--heading_light);
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 20px;
+    border-radius:10px;
+    transition:.35s;
+    
+    }
+    
+    .abt-feature:hover{
+        background: #c8a46d9c;
+    
+    color:var(--bg_light);
+    transform:translateY(-5px);
+    
+    }
+    
+    .abt-feature:hover span,
+    .abt-feature:hover i{
+    color:var(--bg_light);
+    
+    }
+    
+    .abt-feature i{
+    font-size:24px;
+    color:var(--heading_light);
+    transition:.35s;
+    
+    }
+    
+    .abt-feature span{
+    
+    font-size:16px;
+    font-weight:600;
+    color:var(--bg_light);
+    transition:.35s;
+    
+    }
+    
+    .abt-btn{
+    
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 36px;
+    background:var(--heading_light);
+    color:var(--bg_light);
+    text-decoration:none;
+    font-weight:600;
+    border-radius:6px;
+    transition:.35s;
+    
+    }
+    
+    .abt-btn:hover{
+    background:var(--heading_dark);
+    }
     /* About Page CSS End */
