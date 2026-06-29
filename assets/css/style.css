@@ -1209,7 +1209,7 @@ span.theme {
 
 .abt-card-content h3 {
     font-size: 32px;
-    margin: 12px 0;
+    margin: 12px 0 0 ;
     color: var(--heading_light);
 }
 
