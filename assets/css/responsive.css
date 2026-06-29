@@ -102,10 +102,34 @@
         flex-direction:column;
         align-items:flex-start;
     }
+    .abt-hero{
+        min-height:650px;
+    }
+   .abt-hero-content p{
+        font-size:1rem;
+    }
 }
 
 @media screen and (max-width:767px) {
+    .abt-hero-content h1{
+        font-size:38px;
+        line-height:1.2;
+    }
 
+    .abt-hero-content span{
+        font-size:12px;
+        letter-spacing:3px;
+    }
+
+    .abt-hero-content p{
+        font-size:15px;
+        margin-bottom:30px;
+    }
+
+    .abt-btn{
+        width:100%;
+        max-width:240px;
+    }
    .hero{
         min-height:85vh;
     }
@@ -123,11 +147,6 @@
         align-items:center;
     }
 
-    .btn-primary,
-    .btn-secondary{
-        width:220px;
-        text-align:center;
-    }
 }
 
 @media screen and (max-width:575px) {}
