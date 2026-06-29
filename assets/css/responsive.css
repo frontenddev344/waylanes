@@ -38,6 +38,9 @@
     .hero_banner_line {
         display: none;
     }
+    .hotel-card-grid{
+        grid-template-columns:repeat(3,1fr);
+        }
 }
 
 @media screen and (max-width:1024px) {}
@@ -175,7 +178,9 @@
     .home_category_content{
         transform:translateY(0);
     }
-
+    .hotel-card-grid{
+        grid-template-columns:repeat(2,1fr);
+        }
 }
 
 @media screen and (max-width:767px) {
@@ -210,10 +215,6 @@
     .hero-buttons {
         flex-direction: column;
         align-items: center;
-    }
-
-    .abt-story-section {
-        padding: 80px 0;
     }
 
     .abt-story-image img {
@@ -297,7 +298,18 @@
         height:40px;
         font-size:26px;
     }
-    
+    .hotel-card-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+        
+        }
+        .hotel-card-img{
+        height:400px;
+        }
+        
+        .hotel-card h3{
+        font-size:28px;
+        }
 }
 
 @media screen and (max-width:575px) {}
