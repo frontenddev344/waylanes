@@ -168,7 +168,13 @@
         font-size: 42px;
 
     }
+    .home_category_card{
+        height:380px;
+    }
 
+    .home_category_content{
+        transform:translateY(0);
+    }
 
 }
 
