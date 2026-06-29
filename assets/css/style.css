@@ -1521,9 +1521,9 @@ p.maintext {
 .hotel-card:hover .hotel-btn::after{
     background:#d8b56a;
 }
-.hotel-card h3.hotel-card h3 {
+.hotel-card h3 {
     margin-top: 22px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
     line-height: 29px;
     color: var(--heading_dark);
