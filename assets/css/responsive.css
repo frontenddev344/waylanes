@@ -151,15 +151,14 @@
         object-fit:cover;
     }
     .hero_banner_content{
-        width:100%;
-        min-height:auto;    
+        min-height:auto;
+        padding:4rem 3rem;
+    
         background:linear-gradient(
             135deg,
             var(--heading_dark),
             var(--bg_dark)
         );
-    
-        padding:4rem 3rem;
     }
     .hero_banner_subtitle{
         font-size:1.5rem;
@@ -232,7 +231,6 @@ display: none;
         width: 100%;
     }
     .hero_banner_image_wrapper{
-
         display:block;
         height:25rem;
     }
