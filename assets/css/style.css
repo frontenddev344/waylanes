@@ -755,8 +755,9 @@ span.theme {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 6vw, 5.5rem);
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1.5625rem;
+    color: var(--white);
 }
 
 .hero h1 span {
@@ -1210,7 +1211,7 @@ span.theme {
 .abt-card-content h3 {
     font-size: 32px;
     margin: 12px 0;
-    font-family: 'Cormorant Garamond', serif;
+    color: var(--heading_light);
 }
 
 .abt-card-content p {
@@ -1272,7 +1273,6 @@ p.maintext {
 }
 
 .hotel-faq {
-    padding: 60px 0 90px;
     background: #f7f6f2;
 }
 
