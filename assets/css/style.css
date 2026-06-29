@@ -461,7 +461,9 @@ cursor:pointer;
 .abt-sticky .abt-toggle span{
 background:#222;
 }
-
+.book_btn_desktop {
+    display: none !important;
+}
 /* Home Banner CSS Start */
 
 .hero{

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -14,7 +16,6 @@
 </head>
 
 <body>
-
     <!-- Header Start-->
     <header class="abt-header">
         <div class="abt-container">
@@ -23,17 +24,18 @@
             </a>
             <nav class="abt-nav">
                 <ul class="abt-menu">
-                    <li><a href="./" >Home</a></li>                  
+                    <li><a href="./" >Home</a></li>
                     <li><a href="manhattan">Manhattan</a></li>
                     <li><a href="times-square">Times Square</a></li>
                     <li><a href="brooklyn">Brooklyn</a></li>
-                    <li><a href="about" class="active">About</a></li>
-                    <li><a href="contact-us">Contact US</a></li>             
+                    <li><a href="about-us" class="active">About Us</a></li>
+                    <li><a href="contact-us">Contact US</a></li>
                 </ul>
             </nav>
             <div class="abt-right">
                 <a href="#" class="butn theme">
-                    Book Now
+                    <span class="book_btn_mobile">Book</span>
+                    <span class="book_btn_desktop">Book Now</span>
                 </a>
                 <button class="abt-toggle">
                     <span></span>
@@ -45,56 +47,39 @@
     </header>
     <!-- Header  End -->
 
+    <!--Home Banner Section Start -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-overlay"></div>
 
-<section class="abt-hero">
+            <div class="container hero-content">
+                <span class="hero-badge">Luxury Stays</span>
 
-    <img src="images/about-banner.jpg" alt="Banner">
+                <h1>
+                    Find Your Perfect
+                    <span>Hotel Experience</span>
+                </h1>
 
-    <div class="abt-overlay"></div>
+                <p>
+                    Discover luxury hotels, boutique stays, and relaxing resorts
+                    with seamless online booking and unforgettable hospitality.
+                </p>
 
-    <div class="abt-hero-content">
-
-        <span>Boutique Hotel • New York</span>
-
-        <h1>
-            Experience Boutique Hospitality
-            <br>
-            In The Heart Of Manhattan
-        </h1>
-
-        <p>
-            Located at 447 Broadway, our hotel combines elegant interiors,
-            exceptional comfort, and personalized hospitality in one of New York's
-            most vibrant neighborhoods.
-        </p>
-
-        <a href="#about" class="abt-btn">Discover More</a>
-
-    </div>
-
-</section>
-
-<section id="about" class="abt-about-section">
-
-    <div class="abt-about-text">
-        <span>About Our Story</span>
-        <h2>Modern boutique hospitality with a personal touch</h2>
-        <p>
-            At Waylanes, we pair refined design, curated service, and an unbeatable Manhattan location to create stays that feel effortless and memorable.
-        </p>
-        <div class="abt-about-actions">
-            <a href="#contact" class="abt-btn">Book a Stay</a>
-            <a href="#gallery" class="abt-link">View Gallery</a>
+                <div class="hero-button">
+                    <a href="manhattan" class="butn theme">Explore Rooms</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    <!--Home Banner Section End -->
 
-    <div class="abt-about-image">
-        <img src="images/about-banner.jpg" alt="Boutique hotel interior">
-    </div>
 
-</section>
 
-<script src="assets/js/index.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/index.js"></script>
 
 </body>
+
 </html>
