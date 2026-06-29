@@ -6,11 +6,13 @@
     .abt-things-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .hero_banner_image_wrapper {
         height: 30rem;
         order: -1;
         display: block;
     }
+
     .hero_banner_section {
         grid-template-columns: 1fr;
         background: none;
@@ -38,9 +40,10 @@
     .hero_banner_line {
         display: none;
     }
-    .hotel-card-grid{
-        grid-template-columns:repeat(3,1fr);
-        }
+
+    .hotel-card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width:1024px) {}
@@ -171,16 +174,29 @@
         font-size: 42px;
 
     }
-    .home_category_card{
-        height:380px;
+
+    .home_category_card {
+        height: 380px;
     }
 
-    .home_category_content{
-        transform:translateY(0);
+    .home_category_content {
+        transform: translateY(0);
     }
-    .hotel-card-grid{
-        grid-template-columns:repeat(2,1fr);
-        }
+
+    .hotel-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .why_us_card_img{
+        height:220px;
+    }
+
+    .why_us_card_content{
+        padding:22px;
+    }
+
+    .why_us_card_content h4{
+        font-size:1.75rem;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -276,40 +292,63 @@
     .abt-thing-card {
         height: 420px;
     }
-    .hotel-faq{
-        padding:80px 0;
+
+    .hotel-faq {
+        padding: 80px 0;
     }
-    
-    .faq-question{
-        padding:22px;
+
+    .faq-question {
+        padding: 22px;
     }
-    
-    .faq-question span{
-        font-size:18px;
+
+    .faq-question span {
+        font-size: 18px;
     }
-    
-    .faq-answer p{
-        padding:0 22px 22px;
-        font-size:15px;
+
+    .faq-answer p {
+        padding: 0 22px 22px;
+        font-size: 15px;
     }
-    
-    .faq-question i{
-        width:40px;
-        height:40px;
-        font-size:26px;
+
+    .faq-question i {
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
     }
-    .hotel-card-grid{
-        grid-template-columns:1fr;
-        gap:40px;
-        
-        }
-        .hotel-card-img{
-        height:400px;
-        }
-        
-        .hotel-card h3{
-        font-size:28px;
-        }
+
+    .hotel-card-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+    }
+
+    .hotel-card-img {
+        height: 400px;
+    }
+
+    .hotel-card h3 {
+        font-size: 28px;
+    }
+
+    .why_us_sec {
+        padding: 60px 0;
+    }
+
+    .why_us_card_img {
+        height: 220px;
+    }
+
+    .why_us_card_content {
+        padding: 20px;
+    }
+
+    .why_us_card_content h4 {
+        font-size: 1.5rem;
+    }
+
+    .why_us_card_content p {
+        font-size: .95rem;
+    }
 }
 
 @media screen and (max-width:575px) {}

@@ -4,6 +4,7 @@
 :root {
     --bg_dark: #292D33;
     --bg_light: #f8f5f1;
+    --bg_white:#ffffff;
     --button: #2F2F2F;
     --heading_dark: #203350;
     --heading_light: #E1C499;
@@ -34,7 +35,7 @@ body {
     padding: 0;
     margin: 0;
     word-break: break-word;
-    background-color: #f3f3f3;
+    background-color:var(--bg_light);
 }
 
 h1,
@@ -201,7 +202,9 @@ img {
 span.theme {
     color: var(--heading_light);
 }
-
+.white{
+    color: var(--white);
+}
 /* Global CSS End */
 
 /* Website Scrollbar CSS  */
@@ -481,7 +484,7 @@ span.theme {
 /* About Page CSS End */
 
 
-/* Home Banner CSS Start */
+/* Home Page CSS Start */
 
 .hero_banner_section {
     display: grid;
@@ -612,7 +615,6 @@ span.theme {
     transform: scale(1.05);
 }
 
-/* Home Category Cards */
 
 .home_category_card {
     position: relative;
@@ -675,8 +677,6 @@ span.theme {
             rgba(41, 45, 51, .95),
             rgba(41, 45, 51, .30),
             transparent);
-
-    /* Only heading visible initially */
     transform: translateY(calc(100% - 85px));
 
     transition: transform .55s ease;
@@ -707,7 +707,70 @@ span.theme {
 }
 
 
-/* Home Banner CSS End */
+.why_us_sec{
+    background: var(--bg_white);
+}
+
+.why_us_text{
+    max-width:700px;
+    margin:15px auto 0;
+    font-family:var(--font-body);
+    font-size:1rem;
+    line-height:1.8;
+}
+
+.why_us_card{
+    height:100%;
+    background:var(--white);
+    overflow:hidden;
+    transition:all .4s ease;
+}
+
+.why_us_card:hover{
+    transform:translateY(-8px);
+}
+
+.why_us_card_img{
+    height:240px;
+    overflow:hidden;
+    border-radius: 1.25rem;
+}
+
+.why_us_card_img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.why_us_card:hover .why_us_card_img img{
+    transform:scale(1.08);
+}
+
+.why_us_card_content{
+    padding:1.875em 0;
+}
+
+.why_us_card_content h4{
+    color:var(--heading_dark);
+    font-family:var(--font-heading);
+    font-size:2rem;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.why_us_card_content p{
+    margin:0;
+    color:var(--para);
+    font-family:var(--font-body);
+    font-size:.97rem;
+    line-height:1.8;
+}
+
+
+
+/* Home Page CSS End */
 
 
 .hero {
