@@ -269,6 +269,29 @@
     .abt-thing-card {
         height: 420px;
     }
+    .hotel-faq{
+        padding:80px 0;
+    }
+    
+    .faq-question{
+        padding:22px;
+    }
+    
+    .faq-question span{
+        font-size:18px;
+    }
+    
+    .faq-answer p{
+        padding:0 22px 22px;
+        font-size:15px;
+    }
+    
+    .faq-question i{
+        width:40px;
+        height:40px;
+        font-size:26px;
+    }
+    
 }
 
 @media screen and (max-width:575px) {}

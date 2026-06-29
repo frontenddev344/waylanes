@@ -282,7 +282,7 @@ span.theme {
     z-index: 1;
     color: var(--white);
     text-transform: uppercase;
-    border-radius: 1.875rem;
+    border-radius:0.3125rem ;
 }
 
 .butn:after {
@@ -295,7 +295,7 @@ span.theme {
     z-index: -1;
     background: var(--white);
     transition: all 0.3s ease;
-    border-radius: 1.875rem;
+    border-radius: 0.3125rem;
 }
 
 .butn:hover {
@@ -592,11 +592,6 @@ span.theme {
     background: transparent;
     color: var(--heading_light);
 }
-
-/*==========================
-          IMAGE
-==========================*/
-
 .hero_banner_image_wrapper {
     overflow: hidden;
 }
@@ -615,10 +610,120 @@ span.theme {
     transform: scale(1.05);
 }
 
+/* Home Category Cards */
+
+.home_category_card {
+    position: relative;
+    display: block;
+    height: 26rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--heading_light);
+    transition: all .4s ease;
+}
+
+.home_category_card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(41,45,51,.95) 15%,
+        rgba(41,45,51,.2) 60%,
+        rgba(0,0,0,.15) 100%
+    );
+    transition: .4s ease;
+}
+
+.home_category_card:hover::before {
+    background: linear-gradient(
+        to top,
+        rgba(41,45,51,.98),
+        rgba(32,51,80,.75),
+        rgba(225,196,153,.15)
+    );
+}
+
+.home_category_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 1.8rem;
+    color: var(--white);
+}
+
+/* Heading always visible */
+
+.home_category_content h4 {
+    margin: 0;
+    color: var(--heading_light);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    transition: margin .35s ease;
+}
+
+/* Hidden by default */
+
+.home_category_content p,
+.home_category_content .butn {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all .35s ease;
+}
+
+/* Paragraph */
+
+.home_category_content p {
+    margin: 1rem 0 1.5rem;
+    color: var(--white);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    font-size: .95rem;
+}
+
+
+
+.home_category_content .butn {
+    display: inline-block;
+    background: var(--heading_light);
+    color: var(--bg_dark);
+    border: 1px solid var(--heading_light);
+    padding: .75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.home_category_content .butn:hover {
+    background: transparent;
+    color: var(--heading_light);
+}
+
+/* Hover Effects */
+
+.home_category_card:hover .home_category_content h4 {
+    margin-bottom: .75rem;
+}
+
+.home_category_card:hover .home_category_content p,
+.home_category_card:hover .home_category_content .butn {
+    opacity: 1;
+    visibility: visible;
+    max-height: 250px;
+    transform: translateY(0);
+}
 /* Home Banner CSS End */
 
-/* About Page CSS Start */
-/* Home Banner CSS Start */
 
 .hero {
     position: relative;
@@ -962,14 +1067,7 @@ span.theme {
 
 }
 
-.abt-story-content p {
-    font-size: 17px;
-    line-height: 25px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    color: var(--scrolltrack);
 
-}
 
 .abt-story-features {
 
@@ -1177,5 +1275,120 @@ font-size: clamp(34px, calc(1.5rem + 2vw), 56px);
 .abt-thing-card:hover a i{
     transform:translateX(6px);
 }
+p.maintext {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var(--scrolltrack);
+}
 
+.hotel-faq{
+    padding:60px 0 90px ;
+    background:#f7f6f2;
+}
+
+.hotel-faq .container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+.faq-heading{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 70px;
+}
+
+
+
+.faq-heading h2{
+    font-size:clamp(36px,5vw,56px);
+    margin-bottom:18px;
+    color:var(--heading_dark);
+}
+
+
+.faq-wrapper{
+    display:grid;
+    gap:22px;
+}
+
+.faq-item{
+    background: #fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.05);
+    transition:.35s;
+    border:1px solid rgba(0,0,0,.05);
+}
+
+.faq-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 25px 60px rgba(0,0,0,.09);
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    padding:30px 35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    text-align:left;
+}
+
+.faq-question span {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--heading_dark);
+    font-family: 'Cormorant Garamond';
+}
+.faq-question i{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:var(--bg_light);
+    color:var(--heading_light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-style:normal;
+    font-size:30px;
+    transition:.35s;
+}
+
+.faq-answer{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        height .45s cubic-bezier(.4,0,.2,1),
+        opacity .3s ease;
+}
+
+.faq-answer p {
+       padding:0 35px 30px;
+    margin:0;
+    color: var(--scrolltrack);
+    line-height: 28px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.faq-item.active .faq-answer{
+     opacity:1;
+}
+.faq-item.active .faq-answer p {
+    padding: 0 35px 30px;
+}
+.faq-question i {
+   transition:transform .4s ease;
+}
+
+.faq-item.active .faq-question i {
+      transform:rotate(135deg);
+}
 /* About Page CSS End */
