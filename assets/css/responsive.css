@@ -44,6 +44,9 @@
     .hotel-card-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 @media screen and (max-width:1024px) {}
@@ -344,6 +347,31 @@
 
     .why_us_card_content p {
         font-size: .95rem;
+    }
+    .hero {
+        min-height: 80vh;
+    }
+    .footer{
+        padding-top:70px;
+    }
+    
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+    .footer-social {
+        padding-bottom: 20px;
+    }
+    .footer-logo{
+        font-size:40px;
+    }
+    
+    .footer h4{
+        margin-bottom:20px;
+    }
+    
+    .footer-gallery img{
+        height:95px;
     }
 }
 

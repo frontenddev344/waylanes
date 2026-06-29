@@ -1535,3 +1535,139 @@ p.maintext {
     color: var(--heading_light);
 }
 /* About Page CSS End */
+
+/* Footer CSS Start */
+.footer{
+    background:var(--heading_dark);
+    color:var(--bg_light);
+}
+
+.footer .container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr 1.5fr;
+    gap: 17px;
+}
+.footer .container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px 50px;
+}
+.footer-bottom .container{
+    padding-bottom: 0;
+}
+.footer-logo {
+    display: inline-block;
+    font-size: 38px;
+    color: var(--bg_light);
+    text-decoration: none;
+    margin-bottom: 25px;
+    font-family: 'Cormorant Garamond';
+}
+.footer-about p {
+    color: var(--bg_light);
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.footer h4{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 30px;
+      color: var(--bg_light);
+}
+
+
+.footer ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer ul li{
+    margin-bottom:16px;
+}
+
+.footer ul li a {
+    color: var(--bg_light);
+    text-decoration: none;
+    transition: .35s;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer ul li a:hover{
+    color:#caa56c;
+    padding-left:8px;
+}
+
+.footer-contact li{
+    color: var(--bg_light);
+    text-decoration: none;
+    transition: .35s;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-social{
+    display:flex;
+    gap:14px;
+}
+
+.footer-social a{
+    width:45px;
+    height:45px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-decoration:none;
+    transition:.35s;
+}
+
+.footer-social a:hover{
+    background:#caa56c;
+    border-color:#caa56c;
+    transform:translateY(-6px);
+}
+
+.footer-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.footer-gallery img{
+    width:100%;
+    height:85px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:.45s;
+}
+
+.footer-gallery img:hover{
+    transform:scale(1.08);
+    opacity:.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    margin-top: 0;
+    padding: 25px 0;
+}
+.footer-bottom p{
+    text-align:center;
+    color:var(--heading_light);
+    margin:0;
+    font-weight: 300;
+}
+/* Footer CSS End */
