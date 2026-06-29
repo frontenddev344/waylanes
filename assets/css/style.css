@@ -497,20 +497,16 @@ span.theme {
     display: none;
 }
 
-.hero_banner_content{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    width:100%;
-    min-height:52rem;
-
-    padding:5rem;
-
-    background:rgba(32,51,80,.82);
-    backdrop-filter:blur(.25rem);
-
-    color:var(--white);
+.hero_banner_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 52rem;
+    padding: 7rem  5rem 5rem 5rem;
+    background: rgba(32,51,80,.82);
+    backdrop-filter: blur(.25rem);
+    color: var(--white);
 }
 
 .hero_banner_line {
