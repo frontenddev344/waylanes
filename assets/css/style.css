@@ -2,17 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --bg_dark: #f2ede6;
-    --bg_light: #f6f6f6;
+    --bg_light: #f5f5f5;
     --bg_white: #ffffff;
-    --button: #caa05c;
-    --footer:#574640;
-    --heading_dark: #1c1c1d;
-    --heading_light: #caa05c;
+    --button: #a06f49;
+    --footer:#111111;
+    --heading_dark: #111111;
+    --heading_light: #a06f49;
     --para: #59585D;
     --white: #ffffff;
     --scrolltrack: #9f9f9f;
-    --scrollbar: #caa05c;
+    --scrollbar: #a06f49;
     --font-heading: "Cormorant Garamond", serif;
     --font-body: "Inter", sans-serif;
 
@@ -37,7 +36,7 @@ body {
     padding: 0;
     margin: 0;
     word-break: break-word;
-    background-color: var(--bg_light);
+    background-color: var(--bg_white);
 }
 
 h1,
@@ -204,7 +203,9 @@ img {
 span.theme {
     color: var(--heading_light);
 }
-
+.theme{
+    color: var(--theme);
+}
 .white {
     color: var(--white);
 }
@@ -284,7 +285,6 @@ span.theme {
     background: var(--heading_dark);
     outline: none !important;
     cursor: pointer;
-    border: none;
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
@@ -292,6 +292,7 @@ span.theme {
     color: var(--white);
     text-transform: uppercase;
     border-radius: 0.3125rem;
+    border: 1px solid var(--heading_dark);
 }
 
 .butn:after {
@@ -322,9 +323,13 @@ span.theme {
 
 .butn.theme {
     background: var(--heading_light);
-    color: var(--heading_dark);
+    color: var(--white);
+    border-color: var(--button);
 }
 
+.butn.theme:hover {
+    color: var(--heading_light);
+}
 .butn.theme:after {
     background: var(--white);
 }
@@ -711,7 +716,7 @@ span.theme {
 
 
 .why_us_sec {
-    background: var(--bg_light);
+    background: var(--bg_white);
 }
 
 .why_us_text {
@@ -772,7 +777,7 @@ span.theme {
 }
 
 .home_activity {
-    background: var(--bg_white);
+    background: var(--bg_light);
 }
 
 .home_activity .container {
@@ -821,7 +826,7 @@ span.theme {
     padding: 8px 18px;
     margin-bottom: 20px;
     border-radius: 5px;
-    background:rgba(202 160 92/0.6);
+    background: rgba(160 111 73/60%);
     color: var(--white);
     font-family: var(--font-body);
     font-size: 13px;
@@ -2072,7 +2077,9 @@ p.maintext {
     height: 40rem;
     padding-top: 90px;
 }
-
+.manhattan-guide {
+    background: var(--bg_light);
+}
 .mainhotel-bnr-overlay {
     position: absolute;
     inset: 0;
