@@ -204,7 +204,7 @@ span.theme {
     color: var(--heading_light);
 }
 .theme{
-    color: var(--theme);
+    color: var(--button);
 }
 .white {
     color: var(--white);
@@ -1633,7 +1633,9 @@ p.maintext {
     background: var(--footer);
     color: var(--bg_light);
 }
-
+.footer_disclaimer {
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
 .footer .container {
     max-width: 1440px;
     margin: auto;
@@ -1674,10 +1676,10 @@ p.maintext {
 }
 
 .footer h4 {
-    font-size: 26px;
+    font-size: 2rem;
     font-weight: 500;
     margin-bottom: 30px;
-    color: var(--bg_light);
+    color: var(--button);
 }
 
 
@@ -1783,15 +1785,16 @@ p.maintext {
 .main-disclaimer-content h2 {
     font-size: 52px;
     font-family: "Cormorant Garamond", serif;
-    color: #222;
     margin-bottom: 30px;
     text-align: center;
 }
 
 .main-disclaimer-content p {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 22px;
+    color: var(--white);
+    text-align: center;
 }
 
 .main-disclaimer-content p:last-child {
