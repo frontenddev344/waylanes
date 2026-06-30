@@ -1637,7 +1637,7 @@ p.maintext {
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1.5fr 2fr 1.5fr;
-    gap: 17px;
+    gap: 2.5rem;
 }
 
 .footer .container {
