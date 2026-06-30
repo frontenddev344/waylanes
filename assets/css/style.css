@@ -2,18 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --bg_dark: #292D33;
-    --bg_light: #f8f5f1;
+    --bg_dark: #f2ede6;
+    --bg_light: #f6f6f6;
     --bg_white: #ffffff;
-    --button: #2F2F2F;
-    --heading_dark: #203350;
-    --heading_light: #E1C499;
-    --para: #1C2D4F;
+    --button: #caa05c;
+    --footer:#574640;
+    --heading_dark: #1c1c1d;
+    --heading_light: #caa05c;
+    --para: #59585D;
     --white: #ffffff;
-    --scrollbar: #9f9f9f;
-    --scrolltrack: #5e5e5e;
+    --scrolltrack: #9f9f9f;
+    --scrollbar: #caa05c;
     --font-heading: "Cormorant Garamond", serif;
     --font-body: "Inter", sans-serif;
+
 }
 
 /* Global CSS Start */
@@ -1412,7 +1414,7 @@ p.maintext {
     line-height: 25px;
     margin-bottom: 20px;
     font-weight: 400;
-    color: var(--scrolltrack);
+    color: var(--para);
 }
 
 .hotel-faq {
@@ -1624,7 +1626,7 @@ p.maintext {
 
 /* Footer CSS Start */
 .footer {
-    background: var(--heading_dark);
+    background: var(--footer);
     color: var(--bg_light);
 }
 
