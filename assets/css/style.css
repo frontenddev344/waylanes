@@ -819,7 +819,7 @@ span.theme {
     padding: 8px 18px;
     margin-bottom: 20px;
     border: 1px solid rgba(32, 51, 80, 0.15);
-    border-radius: 50px;
+    border-radius: 5px;
     background: rgba(225, 196, 153, 0.18);
     color: var(--heading_dark);
     font-family: var(--font-body);
