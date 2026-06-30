@@ -42,10 +42,11 @@
     }
 
     .hotel-card-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-    .footer-grid{
-        grid-template-columns:repeat(2,1fr);
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -173,6 +174,14 @@
 
     }
 
+    .main-disclaimer-section {
+        padding: 90px 0;
+    }
+
+    .main-disclaimer-content h2 {
+        font-size: 42px;
+    }
+
     .abt-story-content h2 {
         font-size: 42px;
 
@@ -189,20 +198,38 @@
     .hotel-card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .why_us_card_img{
-        height:220px;
+
+    .why_us_card_img {
+        height: 220px;
     }
 
-    .why_us_card_content{
-        padding:22px;
+    .why_us_card_content {
+        padding: 22px;
     }
 
-    .why_us_card_content h4{
-        font-size:1.75rem;
+    .why_us_card_content h4 {
+        font-size: 1.75rem;
     }
 }
 
 @media screen and (max-width:767px) {
+    .main-disclaimer-section {
+        padding: 70px 0;
+    }
+
+    .main-disclaimer-content h2 {
+        font-size: 34px;
+    }
+
+    .main-disclaimer-content p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .hotelsec-card .container {
+        max-width: 100%;
+    }
+
     .abt-hero-content h1 {
         font-size: 38px;
         line-height: 1.2;
@@ -348,30 +375,34 @@
     .why_us_card_content p {
         font-size: .95rem;
     }
+
     .hero {
         min-height: 80vh;
     }
-    .footer{
-        padding-top:70px;
+
+    .footer {
+        padding-top: 70px;
     }
-    
-    .footer-grid{
-        grid-template-columns:1fr;
-        gap:22px;
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
     }
+
     .footer-social {
         padding-bottom: 20px;
     }
-    .footer-logo{
-        font-size:40px;
+
+    .footer-logo {
+        font-size: 40px;
     }
-    
-    .footer h4{
-        margin-bottom:20px;
+
+    .footer h4 {
+        margin-bottom: 20px;
     }
-    
-    .footer-gallery img{
-        height:95px;
+
+    .footer-gallery img {
+        height: 95px;
     }
 }
 
