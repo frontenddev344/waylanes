@@ -709,7 +709,7 @@ span.theme {
 
 
 .why_us_sec {
-    background: var(--bg_white);
+    background: var(--bg_light);
 }
 
 .why_us_text {
@@ -770,7 +770,7 @@ span.theme {
 }
 
 .home_activity {
-    background: var(--bg_light);
+    background: var(--bg_white);
 }
 
 .home_activity .container {
