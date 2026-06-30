@@ -362,7 +362,9 @@ span.theme {
     backdrop-filter: blur(12px);
     transition: .4s;
 }
-
+.abt-logo img {
+    max-width: 6rem;
+}
 .abt-header.abt-sticky {
     background: var(--bg_white);
     box-shadow: 0 10px 35px rgba(0, 0, 0, .08);

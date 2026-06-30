@@ -1,15 +1,29 @@
+// ===========================
+// Sticky Header & Logo
+// ===========================
 const abtHeader = document.querySelector(".abt-header");
+const siteLogo = document.getElementById("siteLogo");
 
-window.addEventListener("scroll", function () {
-
+function updateHeader() {
     if (window.scrollY > 70) {
         abtHeader.classList.add("abt-sticky");
+        siteLogo.src = "./assets/images/logo_dark.png";
     } else {
         abtHeader.classList.remove("abt-sticky");
+        siteLogo.src = "./assets/images/logo.png";
     }
+}
 
-});
+// Run on page load
+window.addEventListener("load", updateHeader);
 
+// Run on scroll
+window.addEventListener("scroll", updateHeader);
+
+
+// ===========================
+// Mobile Menu
+// ===========================
 const toggle = document.querySelector(".abt-toggle");
 const menu = document.querySelector(".abt-menu");
 const menuLinks = document.querySelectorAll(".abt-menu a");
@@ -28,7 +42,10 @@ menuLinks.forEach((link) => {
     });
 });
 
-//Faq//
+
+// ===========================
+// FAQ
+// ===========================
 const items = document.querySelectorAll(".faq-item");
 
 items.forEach(item => {
@@ -38,7 +55,7 @@ items.forEach(item => {
 
     btn.addEventListener("click", () => {
 
-        // Close others
+        // Close other FAQs
         items.forEach(other => {
 
             if (other !== item) {
@@ -55,7 +72,7 @@ items.forEach(item => {
 
         });
 
-        // Toggle current
+        // Toggle current FAQ
         if (item.classList.contains("active")) {
 
             answer.style.height = answer.scrollHeight + "px";
@@ -92,49 +109,54 @@ items.forEach(item => {
 });
 
 
-// Newsletter Validation Start
+// ===========================
+// Newsletter Validation
+// ===========================
 document.getElementById("newsletterForm").addEventListener("submit", function (e) {
-    e.preventDefault(); 
-  
+
+    e.preventDefault();
+
     let isValid = true;
-  
+
     const nameInput = document.querySelector(".name");
     const nameError = document.getElementById("nameError");
+
     if (nameInput.value.trim() === "") {
-      nameError.classList.remove("d-none");
-      isValid = false;
+        nameError.classList.remove("d-none");
+        isValid = false;
     } else {
-      nameError.classList.add("d-none");
+        nameError.classList.add("d-none");
     }
-  
+
     const emailInput = document.querySelector(".email");
     const emailError = document.getElementById("emailError");
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+
     if (!emailPattern.test(emailInput.value.trim())) {
-      emailError.classList.remove("d-none");
-      isValid = false;
+        emailError.classList.remove("d-none");
+        isValid = false;
     } else {
-      emailError.classList.add("d-none");
+        emailError.classList.add("d-none");
     }
-  
+
     if (isValid) {
-      this.reset();
-  
-      let msg = document.getElementById("successMsg");
-      if (!msg) {
-        msg = document.createElement("p");
-        msg.id = "successMsg";
-        msg.className = "text-success mt-3";
-        this.appendChild(msg);
-      }
-      msg.textContent = "Your have been subscribed to our newsletter!";
-  
-  
-      setTimeout(() => {
-        msg.textContent = "";
-      }, 5000);
+
+        this.reset();
+
+        let msg = document.getElementById("successMsg");
+
+        if (!msg) {
+            msg = document.createElement("p");
+            msg.id = "successMsg";
+            msg.className = "text-success mt-3";
+            this.appendChild(msg);
+        }
+
+        msg.textContent = "You have been subscribed to our newsletter!";
+
+        setTimeout(() => {
+            msg.textContent = "";
+        }, 5000);
     }
-  });
-  
-  
-  // Newsletter Validation End
+
+});
