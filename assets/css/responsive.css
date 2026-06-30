@@ -253,6 +253,23 @@
 .contact-form{
 padding: 35px 20px;
 }
+.manhattan-guide-item {
+    gap: 20px;
+}
+
+.manhattan-guide-item.reverse .manhattan-guide-image,
+.manhattan-guide-item.reverse .manhattan-guide-content {
+    order: unset;
+}
+
+.manhattan-exp-wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.manhattan-exp-gallery {
+    order: -1;
+}
 }
 
 @media screen and (max-width:767px) {
@@ -263,11 +280,7 @@ padding: 35px 20px;
         font-size: 34px;
     }
 
-    .main-disclaimer-content p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
+   
     .hotelsec-card .container {
         max-width: 100%;
     }
@@ -476,6 +489,55 @@ padding: 35px 20px;
     
     .inner-bnr p{
         font-size:16px;
+    }
+    .manhattan-guide-content span {
+        margin-bottom: 11px;
+    }
+
+    .manhattan-guide-heading {
+        margin: 0 auto 60px;
+    }
+
+    .manhattan-guide-item {
+        margin-bottom: 30px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .manhattan-guide {
+        padding: 70px 0;
+    }
+
+    .manhattan-cta .theme-btn {
+        padding: 14px 32px;
+    }
+
+    .manhattan-guide-image img {
+        height: 350px;
+    }
+
+    .manhattan-guide-content h3 {
+        font-size: 30px;
+    }
+
+    .manhattan-exp {
+        padding: 70px 0;
+    }
+
+    .manhattan-exp-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-small {
+        flex-direction: row;
+    }
+
+    .gallery-small img {
+        width: 50%;
+    }
+
+    .mainhotel-bnr .theme-btn {
+        padding: 14px 30px;
     }
 }
 
