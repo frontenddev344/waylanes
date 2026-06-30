@@ -380,11 +380,12 @@ span.theme {
 }
 
 .abt-container {
-    width: min(1320px, 92%);
+    max-width: 1440px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 .abt-logo {
@@ -654,7 +655,6 @@ span.theme {
             rgba(41, 45, 51, .12) 100%);
 }
 
-/* Overlay */
 
 .home_category_overlay {
     position: absolute;
@@ -663,7 +663,6 @@ span.theme {
     z-index: 2;
 }
 
-/* Sliding Panel */
 
 .home_category_content {
 
@@ -688,7 +687,6 @@ span.theme {
     transform: translateY(0);
 }
 
-/* Heading */
 
 .home_category_content h4 {
     margin: 0;
@@ -770,8 +768,86 @@ span.theme {
     line-height: 1.8;
 }
 
+.home_activity {
+    background: var(--bg_light);
+}
 
+.home_activity .container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+.home_activity_item {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 100px;
+}
+
+.home_activity_item:last-child {
+    margin-bottom: 0;
+}
+
+.home_activity_reverse {
+    flex-direction: row-reverse;
+}
+
+.home_activity_image,
+.home_activity_content {
+    flex: 1;
+}
+
+.home_activity_image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.home_activity_item:hover .home_activity_image img {
+    transform: scale(1.03);
+}
+
+.home_activity_tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(32, 51, 80, 0.15);
+    border-radius: 50px;
+    background: rgba(225, 196, 153, 0.18);
+    color: var(--heading_dark);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.home_activity_title {
+    margin-bottom: 22px;
+    color: var(--heading_dark);
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.home_activity_text {
+    max-width: 580px;
+    color: var(--para);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.why_us_heading p {
+    font-size: 1rem;
+}
 /* Home Page CSS End */
 
 
@@ -785,6 +861,7 @@ span.theme {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top:90px;
 }
 
 .hero-overlay {
@@ -871,7 +948,7 @@ span.theme {
     color: rgba(255, 255, 255, .75);
 }
 
-/* Home Banner CSS End */
+
 .abt-hero {
 
     position: relative;
@@ -1550,7 +1627,7 @@ p.maintext {
 }
 
 .footer .container {
-    max-width: 1400px;
+    max-width: 1440px;
     margin: auto;
     padding: 0 20px 50px;
 }
@@ -1714,3 +1791,189 @@ p.maintext {
 }
 
 /* Disclaimer Css End */
+
+
+.newsletter-section .row {
+    max-width: 43rem;
+}
+
+.newsletter-section {
+    background-color: rgba(0 0 0/80%);
+    background-blend-mode: multiply;
+}
+
+.newsletter-wrap input {
+    width: 80%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 0.6235rem;
+    color: #fff;
+    border-radius: 0;
+}
+
+.newsletter-wrap input:focus {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+}
+
+.newsletter-wrap input::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.newsletter-wrap input:focus::placeholder {
+    color: #fcee0a;
+}
+
+.newsletter-wrap input:focus {
+    border-bottom: 1px solid #fcee0a;
+}
+
+.newsletter-wrap input::-ms-input-placeholder {
+    color: #fff;
+}
+
+.newsletter-wrap p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.newsletter-wrap h3 {
+    line-height: 1.3;
+}
+
+
+
+/* Contact Css Start */
+.contact-banner {
+    position: relative;
+    background: url("../images/contactbanner.jpg") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    height: 550px;
+    padding-top:90px;
+
+}
+.contact-banner-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(20,28,40,.55);
+}
+.contact-banner .container{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:0 20px;
+}
+.contact-banner-content{
+    max-width:700px;
+    color:var(--bg_white);
+}
+.contact-banner-content span{
+    display:inline-block;
+    color:var(--heading_light);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.contact-banner-content h1{
+    font-size:clamp(42px,5vw,72px);
+    line-height:1.1;
+    margin-bottom:20px;
+      color:var(--heading_light);
+}
+.contact-banner-content p {
+    font-size: 18px;
+    color: var(--bg_light);
+    max-width: 620px;
+    margin: 0;
+}
+
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+
+.info-box{
+    margin-top:30px;
+}
+
+.info-box h4{
+    margin-bottom:8px;
+}
+
+.contact-form{
+    background:var(--bg_white);
+    padding:50px;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+.contact-form form{
+    display:grid;
+    gap:20px;
+}
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    border:1px solid #ddd;
+    padding:18px;
+    font-size:16px;
+    outline:none;
+}
+.contact-form textarea{
+    height:170px;
+    resize:none;
+}
+.contact-form button{
+    height:58px;
+    border:none;
+    background:var(--heading_light);
+    color:var(--bg_white);
+    font-size:16px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.contact-form button:hover{
+    background:var(--heading_dark);
+}
+
+.contact-feature .feature-box p {
+    margin: 0;
+}
+.contact-feature .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.contact-feature .feature-box{
+    background:var(--bg_white);
+    padding:45px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.06);
+    transition:.4s;
+}
+.contact-feature .feature-box:hover{
+    transform:translateY(-10px);
+}
+.contact-feature .feature-box h3{
+    margin-bottom:15px;
+}
+ .contact-map iframe{
+    width:100%;
+    height:550px;
+    border:0;
+}
+/* Contact Css End */

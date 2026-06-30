@@ -3,6 +3,9 @@
 @media screen and (max-width:1399px) {}
 
 @media screen and (max-width:1199px) {
+    html{
+        font-size: 15px;
+    }
     .abt-things-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -48,11 +51,7 @@
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media screen and (max-width:1024px) {}
-
-@media screen and (max-width:991px) {
     .abt-toggle {
         display: flex;
         flex-direction: column;
@@ -139,6 +138,25 @@
         font-size: 52px;
     }
 
+    .home_activity_item {
+        gap: 50px;
+    }
+
+    .home_activity_title {
+        font-size: 46px;
+    }
+
+    .home_activity_image img {
+        height: 420px;
+    }
+
+}
+
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:991px) {
+
+
     .abt-about-section {
         grid-template-columns: 1fr;
         padding: 60px 20px 80px;
@@ -174,8 +192,24 @@
 
     }
 
-    .main-disclaimer-section {
-        padding: 90px 0;
+    .home_activity_item,
+    .home_activity_reverse {
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 70px;
+    }
+
+    .home_activity_title {
+        font-size: 40px;
+    }
+
+    .home_activity_text {
+        max-width: 100%;
+        font-size: 17px;
+    }
+
+    .home_activity_image img {
+        height: 360px;
     }
 
     .main-disclaimer-content h2 {
@@ -210,13 +244,21 @@
     .why_us_card_content h4 {
         font-size: 1.75rem;
     }
+    
+.contact-grid,
+.contact-feature .feature-grid{
+         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+.contact-form{
+padding: 35px 20px;
+}
 }
 
 @media screen and (max-width:767px) {
-    .main-disclaimer-section {
-        padding: 70px 0;
+    html{
+        font-size: 14px;
     }
-
     .main-disclaimer-content h2 {
         font-size: 34px;
     }
@@ -403,6 +445,37 @@
 
     .footer-gallery img {
         height: 95px;
+    }
+    .home_activity_item {
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .home_activity_image img {
+        height: 260px;
+        border-radius: 18px;
+    }
+
+    .home_activity_tag {
+        font-size: 12px;
+        padding: 7px 16px;
+    }
+
+    .home_activity_title {
+        font-size: 2.2rem;
+        margin-bottom: 18px;
+    }
+
+    .home_activity_text {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .contact-banner-content h1{
+        font-size:40px;
+    }
+    
+    .contact-banner-content p{
+        font-size:16px;
     }
 }
 
