@@ -436,7 +436,7 @@ span.theme {
 .abt-menu a:after {
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: -8px;
     left: 0;
     height: 2px;
     width: 0;
@@ -1892,7 +1892,7 @@ p.maintext {
 }
 
 .inner-bnr h1 {
-    font-size: clamp(42px, 5vw, 72px);
+    font-size: clamp(35px, 5vw, 65px);
     line-height: 1.1;
     margin-bottom: 20px;
     color: var(--heading_light);
@@ -2068,7 +2068,7 @@ p.maintext {
     background: url(../images/manhattan-bnr.jpg) center center / cover no-repeat;
     display: flex;
     align-items: center;
-    height: 550px;
+    height: 40rem;
     padding-top: 90px;
 }
 
@@ -2098,7 +2098,7 @@ p.maintext {
 }
 
 .manhattan-exp {
-    background: var(--bg_light);
+    background: var(--bg_white);
 }
 
 .manhattan-exp-wrap {

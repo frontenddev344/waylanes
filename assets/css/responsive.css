@@ -3,9 +3,10 @@
 @media screen and (max-width:1399px) {}
 
 @media screen and (max-width:1199px) {
-    html{
+    html {
         font-size: 15px;
     }
+
     .abt-things-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -149,7 +150,10 @@
     .home_activity_image img {
         height: 420px;
     }
-
+    .abt-menu a:after {
+        bottom: 0;
+    }
+    
 }
 
 @media screen and (max-width:1024px) {}
@@ -244,43 +248,46 @@
     .why_us_card_content h4 {
         font-size: 1.75rem;
     }
-    
-.contact-grid,
-.contact-feature .feature-grid{
-         grid-template-columns: 1fr;
+
+    .contact-grid,
+    .contact-feature .feature-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
-.contact-form{
-padding: 35px 20px;
-}
-.manhattan-guide-item {
-    gap: 20px;
-}
 
-.manhattan-guide-item.reverse .manhattan-guide-image,
-.manhattan-guide-item.reverse .manhattan-guide-content {
-    order: unset;
-}
+    .contact-form {
+        padding: 35px 20px;
+    }
 
-.manhattan-exp-wrap {
-    grid-template-columns: 1fr;
-    gap: 30px;
-}
+    .manhattan-guide-item {
+        gap: 20px;
+    }
 
-.manhattan-exp-gallery {
-    order: -1;
-}
+    .manhattan-guide-item.reverse .manhattan-guide-image,
+    .manhattan-guide-item.reverse .manhattan-guide-content {
+        order: unset;
+    }
+
+    .manhattan-exp-wrap {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .manhattan-exp-gallery {
+        order: -1;
+    }
 }
 
 @media screen and (max-width:767px) {
-    html{
+    html {
         font-size: 14px;
     }
+
     .main-disclaimer-content h2 {
         font-size: 34px;
     }
 
-   
+
     .hotelsec-card .container {
         max-width: 100%;
     }
@@ -459,6 +466,7 @@ padding: 35px 20px;
     .footer-gallery img {
         height: 95px;
     }
+
     .home_activity_item {
         gap: 25px;
         margin-bottom: 60px;
@@ -483,13 +491,15 @@ padding: 35px 20px;
         font-size: 16px;
         line-height: 1.8;
     }
-    .contact-banner-content h1{
-        font-size:40px;
+
+    .contact-banner-content h1 {
+        font-size: 40px;
     }
-    
-    .inner-bnr p{
-        font-size:16px;
+
+    .inner-bnr p {
+        font-size: 16px;
     }
+
     .manhattan-guide-content span {
         margin-bottom: 11px;
     }
