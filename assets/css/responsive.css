@@ -197,7 +197,9 @@
         bottom: 20px;
 
     }
-
+    .hotel-btn {
+        max-width: 90%;
+    }
     .home_activity_item,
     .home_activity_reverse {
         flex-direction: column;
@@ -363,7 +365,9 @@
 
         padding: 3rem 1.5rem;
     }
-
+    p.maintext {
+        font-size: 1rem;
+     }
 
     .hero_banner_subtitle {
         font-size: 1.35rem;
@@ -414,10 +418,6 @@
 
     .hotel-card-img {
         height: 400px;
-    }
-
-    .hotel-card h3 {
-        font-size: 28px;
     }
 
     .why_us_sec {
@@ -551,9 +551,12 @@
     .mainhotel-bnr .theme-btn {
         padding: 14px 30px;
     }
+
 }
 
-@media screen and (max-width:575px) {}
+@media screen and (max-width:575px) {
+
+}
 
 @media screen and (min-width:575px) {
     span.book_btn_desktop {

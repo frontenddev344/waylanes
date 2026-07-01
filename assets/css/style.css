@@ -890,13 +890,14 @@ span.theme {
     max-width: 47.5rem;
     text-align: center;
     color: var(--white);
+    margin: 0 auto;
 }
 
 .hero-badge {
     display: inline-block;
     padding: 0.625rem 1.375rem;
     border: 0.0625rem solid rgba(225, 196, 153, .45);
-    color: var(--heading_light);
+    color: var(--white);
     background: rgba(255, 255, 255, .05);
     border-radius: 2.5rem;
     letter-spacing: 0.125rem;
@@ -1132,7 +1133,7 @@ span.theme {
 }
 
 .abt-story-section {
-    background: var(--bg_light);
+    background: var(--white);
 
 }
 
@@ -1184,17 +1185,6 @@ span.theme {
     font-size: 15px;
     display: block;
     margin-top: 8px;
-
-}
-
-.abt-subtitle {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--heading_light);
-    margin-bottom: 20px;
 
 }
 
@@ -1297,7 +1287,9 @@ span.theme {
     font-weight: 600;
     margin-bottom: 15px;
 }
-
+.mainhotel-bnr .abt-subtitle {
+    color: var(--white);
+}
 .sec-head {
     font-size: clamp(34px, calc(1.5rem + 2vw), 56px);
 }
@@ -1419,7 +1411,7 @@ span.theme {
 }
 
 p.maintext {
-    font-size: 17px;
+    font-size: 1.125rem;
     line-height: 25px;
     margin-bottom: 20px;
     font-weight: 400;
@@ -1538,7 +1530,7 @@ p.maintext {
 }
 
 .hotelsec-card {
-    background: var(--bg_light);
+    background: var(--white);
 }
 
 .hotelsec-card .container {
@@ -1590,7 +1582,7 @@ p.maintext {
     font-weight: 500;
     transition: .45s;
     padding: 15px 30px;
-    max-width: 150px;
+    max-width: 230px;
 }
 
 .hotelsec-card .container {
@@ -1619,7 +1611,7 @@ p.maintext {
 
 .hotel-card h3 {
     margin-top: 22px;
-    font-size: 26px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 29px;
     color: var(--heading_dark);
@@ -1915,14 +1907,15 @@ p.text_newsletter {
     font-size: clamp(35px, 5vw, 65px);
     line-height: 1.1;
     margin-bottom: 20px;
-    color: var(--heading_light);
+    color: var(--white);
+    font-weight: 500;
 }
 
 .inner-bnr p {
     font-size: 18px;
     color: var(--bg_light);
     max-width: 620px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 
@@ -2033,14 +2026,14 @@ p.text_newsletter {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.75rem;
-    color: var(--button);
+    color: var(--para);
     margin-bottom: 0.5rem;
 }
 
 .last-update-content h4,
 .last-update-content h3,
 .last-update-content h2 {
-    color: var(--heading_dark);
+    color: var(--heading_light);
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: .5rem;
@@ -2051,7 +2044,7 @@ p.text_newsletter {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.75rem;
-    color: var(--button);
+    color: var(--para);
     position: relative;
     padding-bottom: 0.625rem;
     padding-left: 1.25rem;
@@ -2099,10 +2092,7 @@ p.text_newsletter {
 .mainhotel-bnr-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, .75) 0%,
-            rgba(0, 0, 0, .45) 50%,
-            rgba(0, 0, 0, .25) 100%);
+    background: rgba(0 0 0/60%);
 }
 
 .mainhotel-bnr .container {
