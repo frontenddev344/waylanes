@@ -31,10 +31,7 @@
     .hero_banner_content {
         min-height: auto;
         padding: 4rem 3rem;
-
-        background: linear-gradient(135deg,
-                var(--heading_dark),
-                var(--bg_dark));
+        background: var(--footer);
     }
 
     .hero_banner_subtitle {
@@ -150,10 +147,11 @@
     .home_activity_image img {
         height: 420px;
     }
+
     .abt-menu a:after {
         bottom: 0;
     }
-    
+
 }
 
 @media screen and (max-width:1024px) {}
