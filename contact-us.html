@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Have a question about one of our guides, spotted something that needs correcting, or interested in partnering with us? Get in touch.">
+    <meta name="description"
+        content="Have a question about one of our guides, spotted something that needs correcting, or interested in partnering with us? Get in touch.">
     <link rel="canonical" href="https://waylanes.com/contact-us">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Waylanes">
     <meta property="og:title" content="Contact Waylanes | Questions, Corrections & Partnerships">
-    <meta property="og:description" content="Have a question about one of our guides, spotted something that needs correcting, or interested in partnering with us? Get in touch.">
+    <meta property="og:description"
+        content="Have a question about one of our guides, spotted something that needs correcting, or interested in partnering with us? Get in touch.">
     <meta property="og:url" content="https://waylanes.com/contact-us">
     <meta property="og:image" content="https://waylanes.com/assets/images/og_image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Waylanes | Questions, Corrections & Partnerships">
-    <meta name="twitter:description" content="Have a question about one of our guides, spotted something that needs correcting, or interested in partnering with us? Get in touch.">
+    <meta name="twitter:description"
+        content="Have a question about one of our guides, spotted something that needs correcting, or interested in partnering with us? Get in touch.">
     <meta name="twitter:image" content="https://waylanes.com/assets/images/og_image.png">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/slick.css">
@@ -115,7 +117,7 @@
                         <p class="maintext">+1 (917) 722-5027</p>
 
                     </div>
-                   
+
 
                     <div class="info-box">
 
@@ -130,23 +132,20 @@
 
                 <div class="contact-form">
 
-                    <form>
-
-                        <input type="text" placeholder="Your Name">
-
-                        <input type="email" placeholder="Email Address">
-
-                        <input type="tel" placeholder="Phone Number">
-
-                        <input type="text" placeholder="Subject">
-
-                        <textarea placeholder="Your Message"></textarea>
-
+                    <form id="contactForm" novalidate>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Email Address" required>
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                        <input type="text" id="subject" placeholder="Subject" required>
+                        <textarea id="message" placeholder="Your Message" required></textarea>
                         <button type="submit">
                             Send Message
                         </button>
 
                     </form>
+                    <div class="success-message" style="display: none;">
+                        ✅ Thank you for contacting us! We've received your message and one of our team members will get back to you shortly.
+                    </div>
 
                 </div>
 
@@ -205,7 +204,10 @@
 
     <!-- Map Section Start -->
     <div class="contact-map py-7">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4317949243623!2d-74.001387!3d40.720420999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a327488f3%3A0x3442aba8df6d643c!2s447%20Broadway%202nd%20Floor%2C%20New%20York%2C%20NY%2010013%2C%20USA!5e1!3m2!1sen!2sin!4v1782895572006!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4317949243623!2d-74.001387!3d40.720420999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a327488f3%3A0x3442aba8df6d643c!2s447%20Broadway%202nd%20Floor%2C%20New%20York%2C%20NY%2010013%2C%20USA!5e1!3m2!1sen!2sin!4v1782895572006!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
     <!-- Map Section End -->
 
@@ -227,7 +229,7 @@
                         <li><a href="https://maps.app.goo.gl/Kg6s3rjACwatEMSD7"><img
                                     src="assets/images/location-icon.svg" alt="location-icon">447 Broadway, 2nd
                                 Floor, <br> New York, NY 10013</a></li>
-                              <li><a href="tel:+19177225027"><img src="assets/images/call-icon1.svg" alt="call-icon">+1 (917)
+                        <li><a href="tel:+19177225027"><img src="assets/images/call-icon1.svg" alt="call-icon">+1 (917)
                                 722-5027</a>
                         </li>
 
@@ -309,7 +311,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                     <p>Copyright © 2026 | <a href="./" class="theme"> Waylanes.com</a>  | All Rights Reserved.</p>
+                <p>Copyright © 2026 | <a href="./" class="theme"> Waylanes.com</a> | All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -435,6 +437,69 @@
                 name +
                 "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
         }
+    </script>
+    <script>
+       const form = document.getElementById("contactForm");
+const successMessage = document.querySelector(".success-message");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+
+    // Clear previous validation messages
+    [name, email, phone, subject, message].forEach(field => {
+        field.setCustomValidity("");
+    });
+
+    // Name
+    if (!/^[A-Za-z\s]{3,50}$/.test(name.value.trim())) {
+        name.setCustomValidity("Please enter a valid name (minimum 3 letters).");
+    }
+
+    // Email
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        email.setCustomValidity("Please enter a valid email address.");
+    }
+
+    // Phone
+    if (!/^\+?[0-9]{10,15}$/.test(phone.value.trim())) {
+        phone.setCustomValidity("Please enter a valid phone number.");
+    }
+
+    // Subject
+    if (subject.value.trim().length < 5) {
+        subject.setCustomValidity("Subject must be at least 5 characters long.");
+    }
+
+    // Message
+    if (message.value.trim().length < 20) {
+        message.setCustomValidity("Please enter at least 20 characters.");
+    }
+
+    // Show validation errors if any
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    // Your AJAX/fetch call goes here if needed
+
+    // Show success message
+    successMessage.style.display = "block";
+
+    // Reset form
+    form.reset();
+
+    // Hide message after 3 seconds
+    setTimeout(() => {
+        successMessage.style.display = "none";
+    }, 3000);
+});
     </script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/bootstrap.js"></script>
