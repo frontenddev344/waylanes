@@ -157,7 +157,9 @@
 @media screen and (max-width:1024px) {}
 
 @media screen and (max-width:991px) {
-
+    .py-7 {
+        padding: 3.375rem 0;
+    }
 
     .abt-about-section {
         grid-template-columns: 1fr;
@@ -207,7 +209,7 @@
 
     .home_activity_text {
         max-width: 100%;
-        font-size: 17px;
+        font-size: 1.1rem;
     }
 
     .home_activity_image img {
@@ -227,11 +229,7 @@
         height: 380px;
     }
 
-    .home_category_content {
-        transform: translateY(0);
-    }
-
-    .hotel-card-grid {
+     .hotel-card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -486,7 +484,7 @@
     }
 
     .home_activity_text {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.8;
     }
 
