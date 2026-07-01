@@ -2300,3 +2300,53 @@ section.manhattan-guide h2 {
 
 
 /* Hotelcard-page-end */
+
+/* Cookies CSS Start */
+.cookie-alert {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 320px;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+    border: 3px solid var(--accent-hover);
+    border-radius: 1.875rem;
+    background: var(--footer);
+}
+
+.cookie-alert.show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+}
+
+.cookie-alert .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--button);
+}
+
+.cookie-alert .card-text {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.cookie-alert .card-text a {
+    color: var(--accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.btn-toolbar .butn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9375rem;
+}
+
+
+/* Cookies CSS End */
