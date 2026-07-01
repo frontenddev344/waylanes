@@ -764,7 +764,7 @@ span.theme {
     padding: 1.875em 0;
 }
 
-.why_us_card_content h4 {
+.why_us_card_content h3 {
     color: var(--heading_dark);
     font-family: var(--font-heading);
     font-size: 2rem;
