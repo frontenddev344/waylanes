@@ -133,23 +133,24 @@
                 <div class="contact-form">
 
                     <form id="contactForm" novalidate>
-                        <input type="text" id="name" required
+                        <input type="text" id="name" placeholder="Your Name" required
                             oninvalid="this.setCustomValidity('Please enter your name.')"
                             oninput="this.setCustomValidity('')">
 
-                        <input type="email" id="email" required
+                        <input type="email" id="email" placeholder="Email Address" required
                             oninvalid="this.setCustomValidity('Please enter your email address.')"
                             oninput="this.setCustomValidity('')">
 
-                        <input type="tel" id="phone" required
+                        <input type="tel" id="phone" placeholder="Phone Number" required
                             oninvalid="this.setCustomValidity('Please enter your phone number.')"
                             oninput="this.setCustomValidity('')">
 
-                        <input type="text" id="subject" required
+                        <input type="text" id="subject" placeholder="Subject" required
                             oninvalid="this.setCustomValidity('Please enter a subject.')"
                             oninput="this.setCustomValidity('')">
 
-                        <textarea id="message" required oninvalid="this.setCustomValidity('Please enter your message.')"
+                        <textarea id="message" placeholder="Your Message" required
+                            oninvalid="this.setCustomValidity('Please enter your message.')"
                             oninput="this.setCustomValidity('')"></textarea>
                         <button type="submit">
                             Send Message
@@ -226,7 +227,7 @@
     <!-- Map Section End -->
 
 
-    <!--Footer Start -->
+    <!--Footer-Start -->
     <footer class="footer pt-7">
         <div class="container">
             <div class="footer-grid">
@@ -252,7 +253,7 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="./">Home</a></li>
                         <li><a href="./manhattan">Manhattan</a></li>
@@ -263,7 +264,7 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Other Links</h4>
+                    <h3>Other Links</h3>
                     <ul>
                         <li><a href="about-us">About Us</a></li>
                         <li><a href="contact-us">Contact Us</a></li>
@@ -273,7 +274,7 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Instagram</h4>
+                    <h3>Instagram</h3>
                     <div class="footer-gallery"> <img src="assets/images/footer-img1.jpg" alt="footer-img1"> <img
                             src="assets/images/footer-img2.jpg" alt="footer-img2"> <img
                             src="assets/images/footer-img3.jpg" alt="footer-img3"> <img
@@ -325,11 +326,11 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>Copyright © 2026 | <a href="./" class="theme"> Waylanes.com</a> | All Rights Reserved.</p>
+                <p>Copyright © 2026 | <a href="./" class="theme"> Waylanes.com</a>  | All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-    <!--Footer End -->
+    <!--Footer-End -->
 
 
 
@@ -518,8 +519,8 @@
             }
 
             // Message validation
-            if (message.value.trim().length < 20) {
-                message.setCustomValidity("Please enter at least 20 characters in your message.");
+            if (message.value.trim().length < 10) {
+                message.setCustomValidity("Please enter at least 10 characters in your message.");
             }
 
             // Show validation errors
