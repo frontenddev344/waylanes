@@ -1847,12 +1847,15 @@ p.maintext {
 }
 
 .newsletter-wrap input::-ms-input-placeholder {
-    color: #fff;
+    color: var(--button);
 }
 
 .newsletter-wrap p {
-    color: #fff;
+    color: var(--white);
     font-size: 1.2rem;
+}
+p.text_newsletter {
+    font-size: 0.8rem;
 }
 
 .newsletter-wrap h3 {
