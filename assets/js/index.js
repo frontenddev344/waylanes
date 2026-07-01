@@ -1,51 +1,53 @@
-// ===========================
-// Sticky Header & Logo
-// ===========================
+// Header JS Start
+
 const abtHeader = document.querySelector(".abt-header");
 const siteLogo = document.getElementById("siteLogo");
-
-function updateHeader() {
-    if (window.scrollY > 70) {
-        abtHeader.classList.add("abt-sticky");
-        siteLogo.src = "./assets/images/logo_dark.png";
-    } else {
-        abtHeader.classList.remove("abt-sticky");
-        siteLogo.src = "./assets/images/logo.png";
-    }
-}
-
-// Run on page load
-window.addEventListener("load", updateHeader);
-
-// Run on scroll
-window.addEventListener("scroll", updateHeader);
-
-
-// ===========================
-// Mobile Menu
-// ===========================
 const toggle = document.querySelector(".abt-toggle");
 const menu = document.querySelector(".abt-menu");
 const menuLinks = document.querySelectorAll(".abt-menu a");
 
-toggle.addEventListener("click", () => {
+function updateHeader() {
+    const isSticky = window.scrollY > 70;
+
+    abtHeader.classList.toggle("abt-sticky", isSticky);
+
+    if (siteLogo) {
+        siteLogo.src = isSticky
+            ? "./assets/images/logo_dark.png"
+            : "./assets/images/logo.png";
+    }
+}
+
+window.addEventListener("load", updateHeader);
+window.addEventListener("scroll", updateHeader);
+
+
+toggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent document click from firing
     menu.classList.toggle("active");
     toggle.classList.toggle("active");
 });
 
 menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
-        if (menu.classList.contains("active")) {
-            menu.classList.remove("active");
-            toggle.classList.remove("active");
-        }
+        menu.classList.remove("active");
+        toggle.classList.remove("active");
     });
 });
 
+document.addEventListener("pointerdown", (e) => {
+    if (
+        menu.classList.contains("active") &&
+        !menu.contains(e.target) &&
+        !toggle.contains(e.target)
+    ) {
+        menu.classList.remove("active");
+        toggle.classList.remove("active");
+    }
+});
+// Header JS End
 
-// ===========================
-// FAQ
-// ===========================
+// FAQ JS Start
 const items = document.querySelectorAll(".faq-item");
 
 items.forEach(item => {
@@ -107,11 +109,9 @@ items.forEach(item => {
     });
 
 });
+// FAQ JS End
 
-
-// ===========================
-// Newsletter Validation
-// ===========================
+// Newsletter JS Start
 document.getElementById("newsletterForm").addEventListener("submit", function (e) {
 
     e.preventDefault();
@@ -160,3 +160,5 @@ document.getElementById("newsletterForm").addEventListener("submit", function (e
     }
 
 });
+
+// Newsletter JS End
