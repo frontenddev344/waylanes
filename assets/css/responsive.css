@@ -160,7 +160,9 @@
     .py-7 {
         padding: 3.375rem 0;
     }
-
+    .home_activity_image {
+        width: 100%;
+    }
     .abt-about-section {
         grid-template-columns: 1fr;
         padding: 60px 20px 80px;
@@ -278,7 +280,11 @@
     html {
         font-size: 14px;
     }
-
+    .newsletter-wrap p {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
     .main-disclaimer-content h2 {
         font-size: 34px;
     }

@@ -1679,7 +1679,7 @@ p.maintext {
     line-height: 24px;
     font-weight: 300;
     margin-bottom: 30px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .footer h4 {
@@ -1704,7 +1704,7 @@ p.maintext {
     color: var(--bg_light);
     text-decoration: none;
     transition: .35s;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     display: flex;
     gap: 10px;
@@ -1775,7 +1775,7 @@ p.maintext {
 
 .footer-bottom p {
     text-align: center;
-    color: var(--heading_light);
+    color: var(--white);
     margin: 0;
     font-weight: 300;
 }
